@@ -1,0 +1,68 @@
+import { NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
+import prismaClient from "@/lib/prisma";
+
+export async function PATCH(req: Request) {
+  const session = await getServerSession(authOptions);
+
+  if (!session || !session.user.id)
+    return NextResponse.json({ error: "Not authorized" }, { status: 401 });
+
+  const { id } = await req.json();
+
+  const findTicket = await prismaClient.ticket.findFirst({
+    where: {
+      id: id as string,
+    },
+  });
+
+  if (!findTicket) {
+    return NextResponse.json({ error: "Filed update ticket" }, { status: 400 });
+  }
+
+  try {
+    await prismaClient.ticket.update({
+      where: {
+        id: id as string,
+      },
+      data: {
+        status: "FECHADO",
+      },
+    });
+
+    return NextResponse.json({ message: "Chamado atualizado com sucesso!" });
+  } catch (error) {
+    return NextResponse.json({ error: "Filed update ticket" }, { status: 400 });
+  }
+}
+
+export async function POST(req: Request) {
+  const { customerId, name, description } = await req.json();
+
+  if (!customerId || !name || !description) {
+    return NextResponse.json(
+      { error: "Failed create new ticket" },
+      { status: 400 }
+    );
+  }
+  try {
+    await prismaClient.ticket.create({
+      data: {
+        name,
+        description,
+        customerId,
+        status: "ABERTO",
+      },
+    });
+
+    return NextResponse.json({ message: "Ticket created" });
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed create new ticket" },
+      { status: 400 }
+    );
+  }
+
+  return NextResponse.json({ customerId, name, description });
+}
