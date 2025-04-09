@@ -1,30 +1,27 @@
-# 🚀 Projeto Next.js com NextAuth, MongoDB Atlas, Prisma, Hook Form e Zod
+# 📦 Projeto Next.js com Autenticação, MongoDB e Formulários Validados
 
-Este é um projeto fullstack utilizando **Next.js**, com autenticação via **NextAuth**, banco de dados **MongoDB Atlas** com ORM **Prisma**, formulários com **React Hook Form** e validação com **Zod**. O projeto está deployado na **Vercel** e pronto para uso em produção.
+Este é um projeto fullstack utilizando **Next.js**, **NextAuth**, **MongoDB Atlas com Prisma**, e **React Hook Form com validação usando Zod**, com tipagem em **TypeScript**. O deploy está feito na **Vercel**.
 
-## 🧱 Tecnologias Utilizadas
+---
+
+## 🚀 Tecnologias Utilizadas
 
 - [Next.js](https://nextjs.org/)
-- [TypeScript] (https://www.typescriptlang.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [NextAuth.js](https://next-auth.js.org/)
-- [MongoDB Atlas](https://www.mongodb.com/)
+- [MongoDB Atlas](https://www.mongodb.com/atlas/database) (banco de dados na nuvem)
 - [Prisma ORM](https://www.prisma.io/)
 - [React Hook Form](https://react-hook-form.com/)
 - [Zod](https://zod.dev/)
-- [Tailwind CSS](https://tailwindcss.com/) (opcional, se usado para estilização)
-- [Vercel](https://vercel.com/) (para deploy)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/) para deploy
 
-## 🖥️ Funcionalidades
+---
 
-- Autenticação com provedor (Google.)
-- Conexão com MongoDB via Prisma
-- Formulários com validação client-side e server-side usando Zod
-- Sessão persistente com JWT ou banco
-- Deploy automático com integração no GitHub + Vercel
-
-## 📦 Instalação
+## 📁 Instalação Local
 
 ```bash
 git clone https://github.com/kaua-vieira5658/devcontrole.git
 cd devcontrole
 npm install
+```
