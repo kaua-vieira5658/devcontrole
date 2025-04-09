@@ -5,6 +5,7 @@ Este é um projeto fullstack utilizando **Next.js**, com autenticação via **Ne
 ## 🧱 Tecnologias Utilizadas
 
 - [Next.js](https://nextjs.org/)
+- [TypeScript] (https://www.typescriptlang.org/)
 - [NextAuth.js](https://next-auth.js.org/)
 - [MongoDB Atlas](https://www.mongodb.com/)
 - [Prisma ORM](https://www.prisma.io/)
