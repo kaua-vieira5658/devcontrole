@@ -1,12 +1,12 @@
-# 🚀 Projeto Next.js com NextAuth, MongoDB, Prisma, Hook Form e Zod
+# 🚀 Projeto Next.js com NextAuth, MongoDB Atlas, Prisma, Hook Form e Zod
 
-Este é um projeto fullstack utilizando **Next.js**, com autenticação via **NextAuth**, banco de dados **MongoDB** com ORM **Prisma**, formulários com **React Hook Form** e validação com **Zod**. O projeto está deployado na **Vercel** e pronto para uso em produção.
+Este é um projeto fullstack utilizando **Next.js**, com autenticação via **NextAuth**, banco de dados **MongoDB Atlas** com ORM **Prisma**, formulários com **React Hook Form** e validação com **Zod**. O projeto está deployado na **Vercel** e pronto para uso em produção.
 
 ## 🧱 Tecnologias Utilizadas
 
 - [Next.js](https://nextjs.org/)
 - [NextAuth.js](https://next-auth.js.org/)
-- [MongoDB](https://www.mongodb.com/)
+- [MongoDB Atlas](https://www.mongodb.com/)
 - [Prisma ORM](https://www.prisma.io/)
 - [React Hook Form](https://react-hook-form.com/)
 - [Zod](https://zod.dev/)
